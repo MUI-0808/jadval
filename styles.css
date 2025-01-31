@@ -55,6 +55,8 @@ th {
    border: none;
    padding: 5px 10px;
    margin-right: 5px;
+   margin-top: 7px;
+   margin-left: 10px;
    cursor: pointer;
    border-radius: 4px;
 }
@@ -64,6 +66,7 @@ th {
 }
 
 .delete-btn {
+   margin-top: 7px;
    background-color: #dc3545;
    color: white;
    border: none;
@@ -80,14 +83,13 @@ th {
 /* Modalni yashirib turish */
 .modal {
    display: none;
+   justify-content: center;
    position: fixed;
    top: 0;
    left: 0;
    width: 100%;
    height: 100%;
    background: rgba(0, 0, 0, 0.5);
-   display: flex;
-   justify-content: center;
    align-items: center;
 }
 
