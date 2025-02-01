@@ -13,52 +13,69 @@
 
 <body>
     <div class="container">
+        
         <button class="create-btn" id="openModal">Create Post</button>
+       
 
-        <!-- Modal -->
-        <div class="modal" id="modal">
-            <div class="modal-content">
-                <span class="close" id="closeModal">
+            <!-- Modal -->
+            <div class="modal" id="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeModal">
+                        <i class="fa-solid fa-x"></i>
+                    </span>
+                    <h2>Create New Post</h2>
+                    <form id="postForm">
+                        <input type="text" id="title" placeholder="ism" required />
+                        <input id="userText" placeholder="familya" required></input>
+                        <button type="submit" id="bbt">Save Post</button>
+                    </form>
+                </div>
+            </div>
+
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>ism</th>
+                        <th>familya</th>
+                        <th>tahrirlash</th>
+                    </tr>
+
+                </thead>
+
+            </table>
+        </div>
+
+        <!-- Edit Modal -->
+        <div class="modal" id="editModal">
+            <div class="modal-content" id="editcontent">
+                <span class="close" id="closeModall">
                     <i class="fa-solid fa-x"></i>
                 </span>
-                <h2>Create New Post</h2>
-                <form id="postForm">
-                    <input type="text" id="title" placeholder="Title" required />
-                    <textarea id="userText" placeholder="Body" required></textarea>
-                    <button type="submit" id="bbt">Save Post</button>
+                <h2>Edit Post</h2>
+                <form id="editForm">
+                    <input type="text" id="editTitle" placeholder="Title" required />
+                    <textarea id="editBody" placeholder="Body" required></textarea>
+                    <button type="submit" id="btt" class="edit-button">Save Changes</button>
                 </form>
             </div>
         </div>
+                <!-- login-modal -->
+                <div class="login-modal" id="login-modal">
+                    <div class="modal-content">
+                        <h2>Login</h2>
+                        <form id="loginForm">
+                            <input type="text" id="usernamee" placeholder="Username" required />
+                            <input type="password" id="passwordd"  placeholder="Password" required></input>
+                            <button type="submit" id="bbtt">Login</button>
+                        </form>
+                    </div>
+                    <!-- /login-modal -->
+        <script src="./modal.js"></script>
 
-        <table id="table">
-            <thead>
-                <tr>
-                    <th>No.</th>
-                    <th>Title</th>
-                    <th>Body</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-
-        </table>
     </div>
-
-    <!-- Edit Modal -->
-    <div class="modal" id="editModal">
-        <div class="modal-content" id="editcontent">
-            <span class="close" id="closeModall">
-                <i class="fa-solid fa-x"></i>
-            </span>
-            <h2>Edit Post</h2>
-            <form id="editForm">
-                <input type="text" id="editTitle" placeholder="Title" required />
-                <textarea id="editBody" placeholder="Body" required></textarea>
-                <button type="submit" id="btt" class="edit-button">Save Changes</button>
-            </form>
-        </div>
-    </div>
-
-    <script src="./modal.js"></script>
 </body>
+
+
 
 </html>

@@ -113,7 +113,7 @@ th {
 
 .modal-content input,
 .modal-content textarea {
-   width: 100%;
+   width: 90%;
    margin: 10px 0;
    padding: 8px;
    border: 1px solid #ddd;
@@ -135,4 +135,37 @@ th {
 
 textarea {
    resize: none;
+}
+
+
+#tanlash {
+   border: 1px solid #ddd;
+   padding: 10px;
+   font-size: 15px;
+   background-color: #28a745;
+   color: white;
+}
+.bor{
+   background-color: #28a745;
+   color: white;
+}
+
+
+.yoq {
+   background-color: #c82333;
+   color: white;
+}
+
+/*! login */
+.login-modal{
+   display: flex;
+   justify-content: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   backdrop-filter: blur(10px);
+   background: rgba(0, 0, 0, 0.5);
+   align-items: center;
 }

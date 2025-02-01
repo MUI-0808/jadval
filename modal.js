@@ -5,12 +5,17 @@ const close = document.querySelector('#closeModal')
 const form = document.querySelector('#postForm');
 const input = document.querySelector('input');
 const bbt = document.querySelector('#bbt');
-const textarea = document.querySelector('textarea');
+const textarea = document.querySelector('#userText');
 const modall = document.querySelector('#closeModall');
 const editform = document.querySelector('#editModal');
 const btt = document.querySelector('#btt');
 const edt = document.querySelector('#editTitle');
 const edb = document.querySelector('#editBody');
+const loginModal = document.querySelector('#login-modal');
+const username = document.querySelector('#usernamee');
+const password = document.querySelector('#passwordd');
+const btn = document.querySelector('#bbtt');
+const formm = document.querySelector('#loginForm')
 
 let count = 1;
 let currentRow = null
@@ -48,13 +53,13 @@ bbt.addEventListener('click', (e) => {
         editform.style.display = 'flex';
 
     })
-        edit.addEventListener('click', (e) => {
-            edt.value = title.textContent 
-            edb.value = body.textContent 
-            e.preventDefault();
-            editform.style.display = 'flex'; 
-            currentRow = tr
-        })
+    edit.addEventListener('click', (e) => {
+        edt.value = title.textContent
+        edb.value = body.textContent
+        e.preventDefault();
+        editform.style.display = 'flex';
+        currentRow = tr
+    })
     delet.textContent = 'delete';
     delet.classList.add('delete-btn');
     delet.addEventListener('click', () => {
@@ -66,19 +71,34 @@ bbt.addEventListener('click', (e) => {
     table.appendChild(tr);
     tr.appendChild(edit);
     tr.appendChild(delet);
+    tr.appendChild(davomat)
     form.reset();
     modal.style.display = 'none';
-
+    form.reset();
 })
 btt.addEventListener("click", (e) => {
     e.preventDefault();
     if (currentRow) {
         const cells = currentRow.getElementsByTagName("td");
-        cells[1].textContent = edt.value; 
-        cells[2].textContent = edb.value; 
+        cells[1].textContent = edt.value;
+        cells[2].textContent = edb.value;
         editform.style.display = "none";
+        form.reset();
     }
 });
+
+
+//!login
+formm.addEventListener('submit', function (e){
+        e.preventDefault();
+        if (username.value === 'admin' && password.value === 'admin') {
+            loginModal.style.display = 'none';
+        } else {
+            alert('parol notogri iltimos qayta urinib koring');
+        }
+});
+
+
 
 //! propogetion
 //! nodelist
